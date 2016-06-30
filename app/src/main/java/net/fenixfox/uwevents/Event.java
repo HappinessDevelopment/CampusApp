@@ -15,10 +15,13 @@ public class Event {
     private String title; //title of event
     private String location; //location of event (room)
 
-    public Event(String title, String location, long time) {
+    public Event(String title, String location, long time, String
+            description, String category) {
         this.title = title;
         this.location = location;
         this.start = time;
+        this.description = description;
+        this.category = category;
     }
 
     public String getLocation() {
