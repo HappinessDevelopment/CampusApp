@@ -105,4 +105,54 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MVH> {
         return eventList.size();
     }
 
+    public Event removeItem(int position) {
+        final Event model = eventList.remove(position);
+        notifyItemRemoved(position);
+        return model;
+    }
+
+    public void addItem(int position, Event model) {
+        eventList.add(position, model);
+        notifyItemInserted(position);
+    }
+
+    public void moveItem(int fromPosition, int toPosition) {
+        final Event model = eventList.remove(fromPosition);
+        eventList.add(toPosition, model);
+        notifyItemMoved(fromPosition, toPosition);
+    }
+
+    public void animateTo(ArrayList<Event> models) {
+        applyAndAnimateRemovals(models);
+        applyAndAnimateAdditions(models);
+        applyAndAnimateMovedItems(models);
+    }
+
+    private void applyAndAnimateRemovals(ArrayList<Event> newModels) {
+        for (int i = eventList.size() - 1; i >= 0; i--) {
+            final Event model = eventList.get(i);
+            if (!newModels.contains(model)) {
+                removeItem(i);
+            }
+        }
+    }
+
+    private void applyAndAnimateAdditions(ArrayList<Event> newModels) {
+        for (int i = 0, count = newModels.size(); i < count; i++) {
+            final Event model = newModels.get(i);
+            if (!eventList.contains(model)) {
+                addItem(i, model);
+            }
+        }
+    }
+
+    private void applyAndAnimateMovedItems(ArrayList<Event> newModels) {
+        for (int toPosition = newModels.size() - 1; toPosition >= 0; toPosition--) {
+            final Event model = newModels.get(toPosition);
+            final int fromPosition = eventList.indexOf(model);
+            if (fromPosition >= 0 && fromPosition != toPosition) {
+                moveItem(fromPosition, toPosition);
+            }
+        }
+    }
 }
