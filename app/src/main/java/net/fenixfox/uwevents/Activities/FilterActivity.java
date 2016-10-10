@@ -1,4 +1,4 @@
-package net.fenixfox.uwevents;
+package net.fenixfox.uwevents.Activities;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -14,6 +14,8 @@ import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import net.fenixfox.uwevents.R;
 
 import java.util.ArrayList;
 

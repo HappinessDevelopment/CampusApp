@@ -1,4 +1,4 @@
-package net.fenixfox.uwevents;
+package net.fenixfox.uwevents.Activities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -29,7 +29,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import net.fenixfox.uwevents.EventsUI.MainActivity;
+import net.fenixfox.uwevents.R;
 
 import java.util.ArrayList;
 import java.util.List;

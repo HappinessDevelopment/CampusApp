@@ -1,4 +1,4 @@
-package net.fenixfox.uwevents;
+package net.fenixfox.uwevents.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

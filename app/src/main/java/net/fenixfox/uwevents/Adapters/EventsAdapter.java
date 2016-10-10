@@ -1,10 +1,9 @@
-package net.fenixfox.uwevents.EventsUI;
+package net.fenixfox.uwevents.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,7 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.fenixfox.uwevents.Events.Event;
-import net.fenixfox.uwevents.EventsDescription;
+import net.fenixfox.uwevents.EventsUI.EventsDescription;
+import net.fenixfox.uwevents.EventsUI.ItemClickListener;
 import net.fenixfox.uwevents.R;
 
 import java.util.ArrayList;

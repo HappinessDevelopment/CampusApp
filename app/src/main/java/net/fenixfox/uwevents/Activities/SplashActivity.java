@@ -1,10 +1,10 @@
-package net.fenixfox.uwevents;
+package net.fenixfox.uwevents.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import net.fenixfox.uwevents.EventsUI.MainActivity;
+import net.fenixfox.uwevents.R;
 
 /**
  * Created by Burhan on 6/13/2016.

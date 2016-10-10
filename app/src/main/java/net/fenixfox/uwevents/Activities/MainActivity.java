@@ -1,4 +1,4 @@
-package net.fenixfox.uwevents.EventsUI;
+package net.fenixfox.uwevents.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,11 +14,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import net.fenixfox.uwevents.CalendarActivity;
 import net.fenixfox.uwevents.Events.AsyncResponse;
 import net.fenixfox.uwevents.Events.EventList;
 import net.fenixfox.uwevents.Events.JsonUpdater;
-import net.fenixfox.uwevents.FilterActivity;
 import net.fenixfox.uwevents.FragmentActivities.HomeFragment;
 import net.fenixfox.uwevents.FragmentActivities.MeetUpsFragment;
 import net.fenixfox.uwevents.R;

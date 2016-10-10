@@ -1,4 +1,4 @@
-package net.fenixfox.uwevents.EventsUI;
+package net.fenixfox.uwevents.Events;
 
 import android.view.View;
 

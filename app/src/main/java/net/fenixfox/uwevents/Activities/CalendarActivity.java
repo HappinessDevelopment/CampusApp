@@ -1,4 +1,4 @@
-package net.fenixfox.uwevents;
+package net.fenixfox.uwevents.Activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import com.github.tibolte.agendacalendarview.CalendarPickerController;
 import com.github.tibolte.agendacalendarview.models.CalendarEvent;
 import com.github.tibolte.agendacalendarview.models.DayItem;
 
-import net.fenixfox.uwevents.EventsUI.MainActivity;
+import net.fenixfox.uwevents.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;
