@@ -9,6 +9,8 @@ import com.github.tibolte.agendacalendarview.CalendarPickerController;
 import com.github.tibolte.agendacalendarview.models.CalendarEvent;
 import com.github.tibolte.agendacalendarview.models.DayItem;
 
+import net.fenixfox.uwevents.EventsUI.MainActivity;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;

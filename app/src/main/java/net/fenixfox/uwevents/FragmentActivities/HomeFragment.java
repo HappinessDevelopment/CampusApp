@@ -11,10 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import net.fenixfox.uwevents.Event;
-import net.fenixfox.uwevents.EventDataHolder;
-import net.fenixfox.uwevents.EventList;
-import net.fenixfox.uwevents.EventsAdapter;
+import net.fenixfox.uwevents.Events.Event;
+import net.fenixfox.uwevents.Events.EventDataHolder;
+import net.fenixfox.uwevents.Events.EventList;
+import net.fenixfox.uwevents.EventsUI.EventsAdapter;
 import net.fenixfox.uwevents.R;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment{
     private static final String TAG = "RecyclerViewFragment";
     private EventList eventList;
-    private EventsAdapter mAdapter;
+    private RecyclerView.Adapter<EventsAdapter.MVH> mAdapter;
     private SwipeRefreshLayout swipeRefreshLayout;
     private RecyclerView recyclerView;
 
@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment{
                 false);
         recyclerView = (RecyclerView) rootView.findViewById(R.id
                 .recycler_view);
-       mAdapter = new EventsAdapter(eventList.getmResultValue());
+        mAdapter = new EventsAdapter(eventList.getmResultValue(), getContext());
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager
                 (getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(mLayoutManager);

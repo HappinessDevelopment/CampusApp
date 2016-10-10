@@ -24,19 +24,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
-
-        <service
-            android:name=".JsonParseService"
-            android:exported="false" />
-
+        <activity android:name=".EventsUI.MainActivity" />
+        <!--
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" >
-        </activity>
+        </activity>-->
 
         <activity android:name=".FilterActivity"/>
         <activity android:name=".CalendarActivity"/>
+        <activity android:name=".EventsDescription" />
     </application>
 
 </manifest>

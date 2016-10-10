@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import net.fenixfox.uwevents.EventsUI.MainActivity;
+
 /**
  * Created by Burhan on 6/13/2016.
  */
@@ -15,7 +17,10 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_up_splash_screen);
 
-        intent = new Intent(this, LoginActivity.class);
+        //Temporarily disabling LoginActivity since it doesnt serve a purpose in this application.
+        //NOTE: remember to add LoginActivity to Android Manifest.
+        // intent = new Intent(this, LoginActivity.class);
+        intent = new Intent(this, MainActivity.class);
         android.os.Handler handler = new android.os.Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
