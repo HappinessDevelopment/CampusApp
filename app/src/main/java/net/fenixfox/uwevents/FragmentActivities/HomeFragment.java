@@ -6,28 +6,27 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import net.fenixfox.uwevents.Events.Event;
 import net.fenixfox.uwevents.Events.EventDataHolder;
 import net.fenixfox.uwevents.Events.EventList;
 import net.fenixfox.uwevents.EventsUI.EventsAdapter;
 import net.fenixfox.uwevents.R;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment{
     private static final String TAG = "RecyclerViewFragment";
+    public RecyclerView.Adapter<EventsAdapter.MVH> mAdapter;
     private EventList eventList;
-    private RecyclerView.Adapter<EventsAdapter.MVH> mAdapter;
     private SwipeRefreshLayout swipeRefreshLayout;
     private RecyclerView recyclerView;
+    private EventsAdapter eventsAdapter;
 
     public HomeFragment(){
         this.eventList = EventDataHolder.getInstance().getData();
@@ -40,7 +39,8 @@ public class HomeFragment extends Fragment{
                 false);
         recyclerView = (RecyclerView) rootView.findViewById(R.id
                 .recycler_view);
-        mAdapter = new EventsAdapter(eventList.getmResultValue(), getContext());
+        eventsAdapter = new EventsAdapter(eventList.getmResultValue(), getContext());
+        mAdapter = eventsAdapter;
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager
                 (getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(mLayoutManager);
@@ -58,17 +58,19 @@ public class HomeFragment extends Fragment{
         return rootView;
     }
 
-
-    public ArrayList<Event> filter(ArrayList<Event> events, String query){
-        query = query.toLowerCase();
-
-        final ArrayList<Event> filteredEventList = new ArrayList<Event>();
-        for(Event event : events){
-            final String text = event.getTitle().toLowerCase();
-            if(text.contains(query)){
-                filteredEventList.add(event);
+    public boolean search(SearchView searchView) {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String text) {
+                return false;
             }
-        }
-        return filteredEventList;
+
+            @Override
+            public boolean onQueryTextChange(String text) {
+                eventsAdapter.getFilter().filter(text);
+                return true;
+            }
+        });
+        return true;
     }
 }

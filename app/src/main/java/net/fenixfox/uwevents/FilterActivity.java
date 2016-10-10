@@ -105,12 +105,6 @@ public class FilterActivity extends AppCompatActivity {
             this.filterList.addAll(filters);
         }
 
-        private class ViewHolder{
-            TextView filterCode;
-            TextView filterName;
-            CheckBox filterCheckBox;
-        }
-
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             ViewHolder holder = null;
@@ -150,6 +144,11 @@ public class FilterActivity extends AppCompatActivity {
             return convertView;
         }
 
+        private class ViewHolder {
+            TextView filterCode;
+            TextView filterName;
+            CheckBox filterCheckBox;
+        }
     }
 
     public class FilterData{
