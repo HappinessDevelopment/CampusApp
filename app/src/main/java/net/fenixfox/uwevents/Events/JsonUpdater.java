@@ -8,7 +8,7 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 
-import net.fenixfox.uwevents.EventsUI.MainActivity;
+import net.fenixfox.uwevents.activities.MainActivity;
 
 import org.greenrobot.eventbus.EventBus;
 

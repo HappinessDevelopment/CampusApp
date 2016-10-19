@@ -1,4 +1,4 @@
-package net.fenixfox.uwevents.Activities;
+package net.fenixfox.uwevents.activities;
 
 import android.content.Context;
 import android.os.Bundle;

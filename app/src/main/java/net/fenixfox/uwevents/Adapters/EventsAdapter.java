@@ -15,8 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.fenixfox.uwevents.Events.Event;
-import net.fenixfox.uwevents.EventsUI.EventsDescription;
-import net.fenixfox.uwevents.EventsUI.ItemClickListener;
+import net.fenixfox.uwevents.activities.EventsActivity;
+import net.fenixfox.uwevents.Events.ItemClickListener;
 import net.fenixfox.uwevents.R;
 
 import java.util.ArrayList;
@@ -114,7 +114,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MVH> imple
             @Override
             public void onClick(View view, int position) {
                 Log.i("hi", String.valueOf(position) + eventsList.get(position).getTitle());
-                Intent intent = new Intent(mContext, EventsDescription.class);
+                Intent intent = new Intent(mContext, EventsActivity.class);
                 intent.putExtra("Event", eventsList.get(position).getTitle());
                 mContext.startActivity(intent);
             }

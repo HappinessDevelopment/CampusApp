@@ -1,4 +1,4 @@
-package net.fenixfox.uwevents.Activities;
+package net.fenixfox.uwevents.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import net.fenixfox.uwevents.Events.JsonUpdater;
 import net.fenixfox.uwevents.FragmentActivities.HomeFragment;
 import net.fenixfox.uwevents.FragmentActivities.MeetUpsFragment;
 import net.fenixfox.uwevents.R;
-import net.fenixfox.uwevents.ViewPagerAdapter;
+import net.fenixfox.uwevents.Adapters.ViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity implements AsyncResponse,
         SearchView.OnQueryTextListener {

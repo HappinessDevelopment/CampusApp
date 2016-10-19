@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import net.fenixfox.uwevents.Events.EventDataHolder;
 import net.fenixfox.uwevents.Events.EventList;
-import net.fenixfox.uwevents.EventsUI.EventsAdapter;
+import net.fenixfox.uwevents.Adapters.EventsAdapter;
 import net.fenixfox.uwevents.R;
 
 /**

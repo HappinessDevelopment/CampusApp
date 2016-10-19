@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".SplashActivity"
+            android:name=".activities.SplashActivity"
             android:label="UWEvents" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,16 +24,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EventsUI.MainActivity" />
+        <activity android:name=".activities.MainActivity" />
         <!--
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>-->
 
-        <activity android:name=".FilterActivity"/>
-        <activity android:name=".CalendarActivity"/>
-        <activity android:name=".EventsDescription" />
+        <activity android:name=".activities.FilterActivity"/>
+        <activity android:name=".activities.CalendarActivity"/>
+        <activity android:name=".activities.EventsActivity" />
     </application>
 
 </manifest>
